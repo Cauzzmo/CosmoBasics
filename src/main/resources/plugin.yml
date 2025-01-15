@@ -1,0 +1,7 @@
+name: CosmoBasics
+version: '1.0'
+main: org.cosmo.elijah.cosmoBasics
+api-version: '1.21'
+authors: [ Cauzzmo, Cosmo, Elijah ]
+description: Basic plugin for minecraft adding simple commands to provide users with more control
+website: https://github.com/Cauzzmo
