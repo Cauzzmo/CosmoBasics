@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffect;
 
@@ -16,12 +17,18 @@ public class cleanse implements CommandExecutor {
 
         if (args.length == 0) {
 
-            Player player = (Player) sender;
+            if (sender instanceof ConsoleCommandSender){
+                sender.sendMessage("Only players can execute the command without arguments!");
+                return true;
+            }
+            else {
+                Player player = (Player) sender;
 
-            for (PotionEffect effect : player.getActivePotionEffects())
-                player.removePotionEffect(effect.getType());
+                for (PotionEffect effect : player.getActivePotionEffects())
+                    player.removePotionEffect(effect.getType());
 
-            return true;
+                return true;
+            }
         }
 
         if (args.length == 1) {

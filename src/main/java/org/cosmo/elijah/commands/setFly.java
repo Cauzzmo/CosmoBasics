@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 public class setFly implements CommandExecutor {
@@ -13,17 +14,23 @@ public class setFly implements CommandExecutor {
 
         if (args.length == 0) {
 
-            Player player = (Player) sender;
-
-            boolean canFly = player.getAllowFlight();
-
-            if (canFly) {
-                player.setFlying(false);
+            if (sender instanceof ConsoleCommandSender) {
+                sender.sendMessage("Only players can execute this command without arguments!");
                 return true;
             }
             else {
-                player.setFlying(false);
-                return true;
+                Player player = (Player) sender;
+
+                boolean canFly = player.getAllowFlight();
+
+                if (canFly) {
+                    player.setFlying(false);
+                    return true;
+                }
+                else {
+                    player.setFlying(false);
+                    return true;
+                }
             }
 
         }

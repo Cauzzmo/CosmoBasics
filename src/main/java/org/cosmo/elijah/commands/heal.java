@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 public class heal implements CommandExecutor {
@@ -13,11 +14,17 @@ public class heal implements CommandExecutor {
 
         if (args.length == 0) {
 
-            Player player = (Player) sender;
+            if (sender instanceof ConsoleCommandSender) {
+                sender.sendMessage("Only players can execute this command without arguments!");
+                return true;
+            }
+            else {
+                Player player = (Player) sender;
 
-            player.setHealth(20);
+                player.setHealth(20);
 
-            return true;
+                return true;
+            }
         }
         if (args.length == 1) {
 
