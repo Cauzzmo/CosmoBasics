@@ -14,3 +14,11 @@ commands:
     description: Toggle player flight
     usage: /<command>
     permission: cosmobasics.fly
+  heal:
+    description: Heal target to full health
+    usage: /<command>
+    permission: cosmobasics.heal
+  cleanse:
+    description: Cleanse target of all potion effects
+    usage: /<command>
+    permission: cosmobasics.cleanse
