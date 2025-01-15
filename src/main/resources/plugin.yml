@@ -35,3 +35,11 @@ commands:
     usage: /<command>
     permission: cosmobasics.teleport
     aliases: tp
+  rest:
+    description: Restores food level of player
+    usage: /<commmand>
+    permission: cosmobasics.rest
+  workbench:
+    description: Opens a crafting table
+    usage: /<command>
+    permission: cosmobasics.workbench
