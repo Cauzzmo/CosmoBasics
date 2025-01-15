@@ -5,3 +5,8 @@ api-version: '1.21'
 authors: [ Cauzzmo, Cosmo, Elijah ]
 description: Basic plugin for minecraft adding simple commands to provide users with more control
 website: https://github.com/Cauzzmo
+commands:
+  setSpawn:
+    description: Set the world spawn
+    usage: /<command>
+    permission: cosmobasics.setspawn
