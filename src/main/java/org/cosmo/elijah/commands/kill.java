@@ -6,16 +6,13 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class heal implements CommandExecutor {
+public class kill implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         if (args.length == 0) {
-
-            Player player = (Player) sender;
-
-            player.setHealth(20);
+            sender.sendMessage("Not enough arguments to execute command");
 
             return true;
         }
@@ -24,17 +21,19 @@ public class heal implements CommandExecutor {
             Player player = Bukkit.getPlayer(args[0]);
 
             if (player != null) {
-                player.setHealth(20);
+                player.damage(100);
                 return true;
-
             }
             else {
-                sender.sendMessage("Player does not exist!");
+                sender.sendMessage("This player does not exist!");
                 return true;
             }
 
         }
+        else {
+            sender.sendMessage("You did something wrong here!");
+            return false;
+        }
 
-        return false;
     }
 }

@@ -37,7 +37,7 @@ public class cleanse implements CommandExecutor {
             }
             else {
                 sender.sendMessage("This player does not exist!");
-                return false;
+                return true;
             }
 
         }

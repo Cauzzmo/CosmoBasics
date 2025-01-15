@@ -1,10 +1,7 @@
 package org.cosmo.elijah;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.cosmo.elijah.commands.cleanse;
-import org.cosmo.elijah.commands.heal;
-import org.cosmo.elijah.commands.setFly;
-import org.cosmo.elijah.commands.setSpawn;
+import org.cosmo.elijah.commands.*;
 
 public final class cosmoBasics extends JavaPlugin {
 
@@ -15,6 +12,8 @@ public final class cosmoBasics extends JavaPlugin {
         this.getCommand("fly").setExecutor(new setFly());
         this.getCommand("heal").setExecutor(new heal());
         this.getCommand("cleanse").setExecutor(new cleanse());
+        this.getCommand("suicide").setExecutor(new suicide());
+        this.getCommand("kill").setExecutor(new kill());
 
     }
 

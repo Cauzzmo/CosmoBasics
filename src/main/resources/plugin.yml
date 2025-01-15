@@ -22,3 +22,11 @@ commands:
     description: Cleanse target of all potion effects
     usage: /<command>
     permission: cosmobasics.cleanse
+  suicide:
+    description: Kills the command sender
+    usage: /<command>
+    permission: cosmobasics.suicide
+  kill:
+    description: Kill the targeted player
+    usage: /<command>
+    permission: cosmobasics.kill

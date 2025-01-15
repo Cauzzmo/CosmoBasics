@@ -48,7 +48,7 @@ public class setFly implements CommandExecutor {
             }
             else {
                 sender.sendMessage("This player cannot be found!");
-                return false;
+                return true;
             }
 
 
