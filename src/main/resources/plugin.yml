@@ -30,3 +30,8 @@ commands:
     description: Kill the targeted player
     usage: /<command>
     permission: cosmobasics.kill
+  teleport:
+    description: Teleports player to target another player location
+    usage: /<command>
+    permission: cosmobasics.teleport
+    aliases: tp
