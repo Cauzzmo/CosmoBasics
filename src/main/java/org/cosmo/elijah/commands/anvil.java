@@ -14,13 +14,14 @@ public class anvil implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        Player player = (Player) sender;
 
-        if (player instanceof ConsoleCommandSender) {
+        if (sender instanceof ConsoleCommandSender) {
             sender.sendMessage("Only players can execute this command!");
             return true;
         }
         else {
+            Player player = (Player) sender;
+
             Inventory anvil = Bukkit.createInventory(player, InventoryType.ANVIL);
             player.openInventory(anvil);
             return true;

@@ -16,6 +16,7 @@ public class workbench implements CommandExecutor {
 
         Player player = (Player) sender;
 
+
         Inventory workbench = Bukkit.createInventory(player, InventoryType.WORKBENCH);
 
         player.openInventory(workbench);
