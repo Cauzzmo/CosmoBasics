@@ -17,6 +17,7 @@ public final class cosmoBasics extends JavaPlugin {
         this.getCommand("teleport").setExecutor(new teleport());
         this.getCommand("rest").setExecutor(new rest());
         this.getCommand("workbench").setExecutor(new workbench());
+        this.getCommand("anvil").setExecutor(new anvil());
 
     }
 
