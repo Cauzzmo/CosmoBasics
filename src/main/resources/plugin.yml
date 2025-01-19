@@ -55,3 +55,9 @@ commands:
     description: Changes the name of the item in hand
     usage: /<command>
     permission: cosmobasics.setname
+  nickname:
+    description: Change the players display name
+    usage: /<command>
+    permission: cosmobasics.nickname
+    aliases: nick
+
